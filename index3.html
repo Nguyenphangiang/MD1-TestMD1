@@ -6,28 +6,25 @@
 </head>
 <body>
 <script>
-    function countNegative(a){
-        let cnt=0;
-        switch (a){
-            case "a":
-                cnt++;
-            case "o":
-                cnt++;
-            case "e":
-                cnt ++;
-            case "u":
-                cnt ++;
-            case "i":
-                cnt ++;
-                return cnt;
-                break;
-            default:
-                return false;
-        }
+    let str1="nguyenphangiang"
+    let str2="123xyz"
+    function countVowel(str){
+        let vowel = ['a','o','e','u','i'];
+        let cnt = 0;
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < vowel.length; j++) {
+                if (str[i]==vowel[j]){
+                     cnt++;
+                }
+            }
+        } if (cnt>0){
+            return cnt;
+        } else return false;
     }
-let str= "giang"
-    let b = countNegative(str);
-    console.log(b);
+    let check1 = countVowel(str1);
+    let check2 = countVowel(str2);
+    console.log(check1);
+    console.log(check2);
 </script>
 
 </body>
